@@ -53,7 +53,7 @@
 }
 
 #nav-bar {
-  margin: 8px 8px 2px;
+  margin: 6px 6px 2px;
   padding: 4px !important;
   border-top: var(--border-width) !important;
   border-style: solid !important;
@@ -82,8 +82,7 @@
   }
 }
 #PersonalToolbar {
-  margin: 8px 8px 2px;
-  padding: 4px !important;
+  margin: 2px 0px 0px;
   border-top: var(--border-width) !important;
   border-style: solid !important;
   border-width: var(--border-width);
@@ -106,7 +105,7 @@
     color: var(--tf-accent);
   }
 }
-
+/*
 #PlacesToolbarItems {
   display: flex;
   justify-content: center;
@@ -115,6 +114,7 @@
 toolbarbutton.bookmark-item:not(.subviewbutton) {
   padding: 8px !important;
 }
+*/
 
 :root[tabsintitlebar] #toolbar-menubar[autohide="true"] {
   --tab-min-height: fit-content !important;

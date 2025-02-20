@@ -1,3 +1,4 @@
+/*
 box#vertical-tabs {
   margin: 8px !important;
   border: var(--border-width) solid var(--tf-border);
@@ -20,17 +21,15 @@ box#vertical-tabs {
     color: var(--tf-accent);
   }
 }
-
+*/
 /* hide window controls */
 .titlebar-buttonbox-container {
   display: var(--tf-display-window-controls);
 }
 
 #TabsToolbar {
-  display: var(--tf-display-horizontal-tabs);
-  margin: 8px 8px 2px;
-  border-top: var(--border-width) !important;
-  border-style: solid !important;
+  /*! display: var(--tf-display-horizontal-tabs); */
+  /*! border-style: solid !important; */
   border-width: var(--border-width);
   border-color: var(--tf-border) !important;
   border-radius: var(--tf-rounding);
@@ -47,7 +46,7 @@ box#vertical-tabs {
     content: "tabs";
     background-color: var(--tf-bg);
     position: absolute;
-    margin: -1rem .75rem;
+    margin: -1rem 0.75rem;
     padding: 0 2px;
   }
 

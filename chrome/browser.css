@@ -7,7 +7,7 @@ browser {
 }
 
 #tabbrowser-tabbox {
-  margin: 8px !important;
+  margin: 6px !important;
   border: var(--border-width) solid var(--tf-border);
   border-radius: var(--tf-rounding);
   padding: 8px !important;

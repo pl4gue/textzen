@@ -1,12 +1,18 @@
 #urlbar {
   text-align: center;
+  
+
+  #urlbar-background {
+    background: transparent !important;
+    border: unset !important;
+    box-shadow: unset !important;
+  }
 }
 
-#urlbar-background {
-  background-color: transparent !important;
-  border: unset !important;
-  box-shadow: unset !important;
+#urlbar[focused=""] #urlbar-background {
+  background: var(--tf-bg) !important;
 }
+
 .urlbarView {
   text-align: start;
   margin-top: 4px;
