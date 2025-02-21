@@ -1,0 +1,15 @@
+:root {
+  --toggle-border-radius: var(--tf-rounding) !important;
+}
+
+.titlebar-button {
+  border-radius: var(--tf-rounding) !important;
+}
+
+/* Zen URL icon radius fix */
+#urlbar
+  hbox.urlbar-input-container
+  box#identity-box.chromeUI
+  box#identity-icon-box.identity-box-button {
+  border-radius: var(--tf-rounding) !important;
+}

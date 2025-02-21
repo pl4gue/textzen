@@ -1,10 +1,9 @@
- 
 ```
-   __            __  ____          
-  / /____  _  __/ /_/ __/___  _  __
- / __/ _ \| |/_/ __/ /_/ __ \| |/_/
-/ /_/  __/>  </ /_/ __/ /_/ />  <  
-\__/\___/_/|_|\__/_/  \____/_/|_|  
+   __            __
+  / /____  _  __/ /_____  ___  ____
+ / __/ _ \| |/_/ __/_  / / _ \/ __ \
+/ /_/  __/>  </ /_  / /_/  __/ / / /
+\__/\___/_/|_|\__/ /___/\___/_/ /_/
 ```
 
 _a port of spotify tui to firefox_
@@ -33,7 +32,7 @@ _a port of spotify tui to firefox_
    instructions.
 
 > [!IMPORTANT]
-> This script automates file writes, use with caution. 
+> This script automates file writes, use with caution.
 
 > [!NOTE]
 > The installation script copies to contents of the repos `chrome` directory to
@@ -97,9 +96,10 @@ To enable the module, add the repo as a flake input, import the module, and enab
               }
            ];
         };
-     } 
+     }
   }
 ```
+
 ```nix
 
 # home.nix
@@ -114,6 +114,7 @@ textfox = {
     };
 };
 ```
+
 </details>
 
 <details><summary>Install using `home-manager.lib.homeManagerConfiguration`:</summary>
@@ -146,18 +147,20 @@ textfox = {
     };
   }
 ```
-  ```nix
 
-  # home.nix
+```nix
 
-  textfox = {
-      enable = true;
-      profile = "firefox profile name here";
-      config = {
-          # Optional config
-      };
-  };
-  ```
+# home.nix
+
+textfox = {
+    enable = true;
+    profile = "firefox profile name here";
+    config = {
+        # Optional config
+    };
+};
+```
+
 </details>
 
 <details><summary>Configuration options:</summary>
@@ -186,7 +189,7 @@ All configuration options are optional and can be set as this example shows (rea
         displaySidebarTools = false;
         displayTitles = false;
         newtabLogo = "   __            __  ____          \A   / /____  _  __/ /_/ __/___  _  __\A  / __/ _ \\| |/_/ __/ /_/ __ \\| |/_/\A / /_/  __/>  </ /_/ __/ /_/ />  <  \A \\__/\\___/_/|_|\\__/_/  \\____/_/|_|  ";
-        font = { 
+        font = {
           family = "Fira Code";
           size = "15px";
           accent = "#654321";
@@ -197,6 +200,7 @@ All configuration options are optional and can be set as this example shows (rea
       };
   };
 ```
+
 </details>
 
 ### Sidebery
@@ -213,8 +217,7 @@ anything crazy needed here, notable settings being set is using the **plain**
 theme and **firefox** color scheme. If you want to you can import the sidebery
 settings provided.
 
-> [!IMPORTANT]
-> **Importing sidebery settings overwrites your current settings, do this at
+> [!IMPORTANT] > **Importing sidebery settings overwrites your current settings, do this at
 > your own risk.**
 
 ## Customization
@@ -228,6 +231,7 @@ the same settings are used (these can be set in about:config).
 | `shyfox.enable.context.menu.icons` | Many context menu items get icons | No icons in context menus |
 
 ### CSS configurations
+
 The theme ships with a `defaults.css`, this file can be overriden by creating a
 `config.css` inside the chrome directory. For instance if I'd want to change the
 border radius it would look like this:
@@ -240,22 +244,31 @@ border radius it would look like this:
 ```
 
 #### Defaults
+
 ```css
 :root {
   --tf-font-family: "SF Mono", Consolas, monospace; /* Font family of config */
   --tf-font-size: 14px; /* Font size of config */
-  --tf-accent: var(--toolbarbutton-icon-fill); /* Accent color used, eg: color when hovering a container  */
-  --tf-bg: var(--lwt-accent-color, -moz-dialog); /* Background color of all elements, tab colors derive from this */
-  --tf-border: var(--arrowpanel-border-color, --toolbar-field-background-color); /* Border color when not hovered */
+  --tf-accent: var(
+    --toolbarbutton-icon-fill
+  ); /* Accent color used, eg: color when hovering a container  */
+  --tf-bg: var(
+    --lwt-accent-color,
+    -moz-dialog
+  ); /* Background color of all elements, tab colors derive from this */
+  --tf-border: var(
+    --arrowpanel-border-color,
+    --toolbar-field-background-color
+  ); /* Border color when not hovered */
   --tf-border-transition: 0.2s ease; /* Smooth color transitions for borders */
   --tf-border-width: 2px; /* Width of borders */
   --tf-rounding: 0px; /* Border radius used through out the config */
   --tf-margin: 0.8rem; /* Margin used between elements in sidebery */
   --tf-display-horizontal-tabs: none; /* If horizontal tabs should be shown, none = hidden, block = shown */
-  --tf-display-window-controls: none; /* If the window controls should be shown (won't work with sidebery and hidden horizontal tabs), none = hidden, flex = shown */ 
+  --tf-display-window-controls: none; /* If the window controls should be shown (won't work with sidebery and hidden horizontal tabs), none = hidden, flex = shown */
   --tf-display-nav-buttons: none; /* If the navigation buttons (back, forward) should be shown, none = hidden, flex = shown */
   --tf-display-urlbar-icons: none; /* If the icons inside the url bar should be shown, none = hidden, flex = shown */
-  --tf-display-sidebar-tools: flex; /* If the "Customize sidebar" button on the sidebar should be shown, none = hidden, flex = shown */ 
+  --tf-display-sidebar-tools: flex; /* If the "Customize sidebar" button on the sidebar should be shown, none = hidden, flex = shown */
   --tf-display-titles: flex; /* If titles (tabs, navbar, main etc.) should be shown, none = hidden, flex = shown */
   --tf-newtab-logo: "   __            __  ____          \A   / /____  _  __/ /_/ __/___  _  __\A  / __/ _ \\| |/_/ __/ /_/ __ \\| |/_/\A / /_/  __/>  </ /_/ __/ /_/ />  <  \A \\__/\\___/_/|_|\\__/_/  \\____/_/|_|  ";
 }

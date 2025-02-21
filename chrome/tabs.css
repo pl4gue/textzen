@@ -1,4 +1,3 @@
-/*
 box#vertical-tabs {
   margin: 8px !important;
   border: var(--border-width) solid var(--tf-border);
@@ -9,27 +8,27 @@ box#vertical-tabs {
   &:focus {
     border-color: var(--tf-accent) !important;
   }
-  &::before {
-    display: var(--tf-display-titles);
-    content: "tabs";
-    background-color: var(--tf-bg);
-    position: absolute;
-    margin: -1.75rem .75rem;
-    padding: 0 2px;
-  }
-  &:hover::before {
-    color: var(--tf-accent);
-  }
+  /*&::before {*/
+  /*  display: var(--tf-display-titles);*/
+  /*  content: "tabs";*/
+  /*  background-color: var(--tf-bg);*/
+  /*  position: absolute;*/
+  /*  margin: -1.75rem 0.75rem;*/
+  /*  padding: 0 2px;*/
+  /*}*/
+  /*&:hover::before {*/
+  /*  color: var(--tf-accent);*/
+  /*}*/
 }
-*/
+
 /* hide window controls */
 .titlebar-buttonbox-container {
   display: var(--tf-display-window-controls);
 }
 
 #TabsToolbar {
-  /*! display: var(--tf-display-horizontal-tabs); */
-  /*! border-style: solid !important; */
+  /*display: var(--tf-display-horizontal-tabs);*/
+  /*border-style: solid !important;*/
   border-width: var(--border-width);
   border-color: var(--tf-border) !important;
   border-radius: var(--tf-rounding);
@@ -37,24 +36,25 @@ box#vertical-tabs {
   &:hover,
   &:focus {
     border-color: var(--tf-accent) !important;
-    &::before {
-      color: var(--tf-accent);
-    }
+    /*&::before {*/
+    /*  color: var(--tf-accent);*/
+    /*}*/
   }
-  &::before {
-    display: var(--tf-display-titles);
-    content: "tabs";
-    background-color: var(--tf-bg);
-    position: absolute;
-    margin: -1rem 0.75rem;
-    padding: 0 2px;
-  }
+  /*&::before {*/
+  /*  display: var(--tf-display-titles);*/
+  /*  content: "tabs";*/
+  /*  background-color: var(--tf-bg);*/
+  /*  position: absolute;*/
+  /*  margin: -1rem 0.75rem;*/
+  /*  padding: 0 2px;*/
+  /*}*/
 
   #firefox-view-button[open] > .toolbarbutton-icon,
   .tab-background:is([selected], [multiselected]) {
     box-shadow: none !important;
     background-color: var(--tab-selected-bgcolor) !important;
   }
+
   .tabbrowser-tab:hover
     > .tab-stack
     > .tab-background:not([selected], [multiselected]) {

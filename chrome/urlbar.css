@@ -1,12 +1,21 @@
 #urlbar {
   text-align: center;
-  
+
+  --toolbarbutton-border-radius: var(--tf-rounding) !important;
+  --urlbarView-separator-color: var(--tf-accent) !important;
+  --urlbarView-hover-background: var(--purple-2);
+  --urlbarView-highlight-background: var(--purple-2);
 
   #urlbar-background {
     background: transparent !important;
     border: unset !important;
     box-shadow: unset !important;
   }
+}
+
+#urlbar-container {
+  background: transparent !important;
+  border: unset !important;
 }
 
 #urlbar[focused=""] #urlbar-background {
@@ -17,14 +26,24 @@
   text-align: start;
   margin-top: 4px;
   background-color: var(--tf-bg);
-  border: var(--border-width) solid var(--tf-accent) !important;
-  border-radius: 0 0 var(--tf-rounding) var(--tf-rounding);
 }
+
 .urlbarView-body-inner {
   #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
     border-top: unset !important;
   }
 }
+
 .urlbarView:not([noresults]) > .search-one-offs:not([hidden]) {
-  border-top: var(--border-width) solid var(--tf-accent) !important;
+  border-radius: var(--tf-rounding) !important;
+}
+
+#urlbar[zen-floating-urlbar="true"] {
+  border: var(--border-width) solid var(--tf-accent) !important;
+  border-radius: var(--tf-rounding) !important;
+}
+
+button.searchbar-engine-one-off-item,
+.urlbarView-row {
+  border-radius: var(--tf-rounding) !important;
 }
